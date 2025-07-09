@@ -1,10 +1,10 @@
-import { reset, seed } from 'drizzle-seed';
-import { db, sql } from './conection.ts';
-import { schema } from './schema/index.ts';
+import { reset, seed } from 'drizzle-seed'
+import { db, sql } from './conection.ts'
+import { schema } from './schema/index.ts'
 
 //import { rooms } from './schema/rooms.ts';
 
-await reset(db, schema);
+await reset(db, schema)
 
 await seed(db, schema).refine((f) => {
   return {
@@ -15,10 +15,13 @@ await seed(db, schema).refine((f) => {
         description: f.loremIpsum(),
       },
     },
-  };
-});
+    questions: {
+      conut: 20,
+    },
+  }
+})
 
-await sql.end();
+await sql.end()
 
 // biome-ignore lint/suspicious/noConsole: only used in dev
-console.log('Database seeded');
+console.log('Database seeded')
