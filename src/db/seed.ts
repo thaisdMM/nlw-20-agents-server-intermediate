@@ -1,5 +1,5 @@
 import { reset, seed } from 'drizzle-seed'
-import { db, sql } from './conection.ts'
+import { db, sql } from './connection.ts'
 import { schema } from './schema/index.ts'
 
 //import { rooms } from './schema/rooms.ts';
@@ -16,7 +16,7 @@ await seed(db, schema).refine((f) => {
       },
     },
     questions: {
-      conut: 20,
+      count: 20,
     },
   }
 })

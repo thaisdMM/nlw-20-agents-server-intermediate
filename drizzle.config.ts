@@ -1,7 +1,7 @@
 // configurações para criar as tabelas no banco de dados
 
-import { defineConfig } from 'drizzle-kit';
-import { env } from './src/env.ts';
+import { defineConfig } from 'drizzle-kit'
+import { env } from './src/env.ts'
 
 export default defineConfig({
   dialect: 'postgresql',
@@ -11,4 +11,4 @@ export default defineConfig({
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-});
+})
