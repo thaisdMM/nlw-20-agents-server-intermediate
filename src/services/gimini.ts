@@ -63,6 +63,7 @@ export async function generateAnswer(
 
   INSTRUÇÕES:
   - Use apenas informações contidas no contexto enviado;
+  - Se a pergunta usar as palavras: "gravação", "arquivo", "conteúdo", "conteúdo da sala","sala", "banco de dados" ou palavras similares entenda que o usário está se referindo ao contexto e responda utilizando o contexto, há não ser que exista no contexto essas palavras chaves. Se elas existirem responda com base nelas primeiro e depois se pergunte ao usuário: "Você está se referindo ao contexto das informações do banco dessa sala? Se sim, por favor, reformule a questão utilizando a palavra chave 'contesto'."
   - Se a resposta não for encontrada no contexto, não invente. Apenas responda que não possui informações suficientes para responder;
   - Seja objetivo;
   - Mantenha um tom educativo e profissional;
